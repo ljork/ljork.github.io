@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Tag: 性能优化 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/性能优化/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
@@ -125,108 +125,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/26/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-26T06:25:13.175Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-26</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
       
       
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/26/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-js性能优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/26/js性能优化/">js性能优化</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/26/js性能优化/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/11/26/js性能优化/" class="archive-article-date">
   	<time datetime="2016-11-26T12:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="js.jpg" alt=""></p>
-<p>##js性能优化</p>
-<p>###下面是一些关于客户端JS性能的一些优化的小技巧：</p>
-<p>1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋值，而应该使用嵌套的++或－－运算符。</p>
-<p>2、如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度。</p>
-<p>3、局部变量的访问速度要比全局变量的访问速度更快，因为全局变量其实是window对象的成员，而局部变量是放在函数的栈里的。</p>
-<p>4.尽量少使用eval，每次使用eval需要消耗大量时间，这时候使用JS所支持的闭包可以实现函数模板。</p>
-<p>5.尽量避免对象的嵌套查询，对于obj1.obj2.obj3.obj4这个语句，需要进行至少3次查询操作，先检查obj1中是否包含 obj2，再检查obj2中是否包含obj3，然后检查obj3中是否包含obj4…这不是一个好策略。应该尽量利用局部变量，将obj4以局部变量 保存，从而避免嵌套查询。</p>
-<p>6.使运算符时，尽量使用+＝，－＝、*＝、\=等运算符号，而不是直接进行赋值运算。</p>
-<p>7.[顶]当需要将数字转换成字符时，采用如下方式：”” + 1。从性能上来看，将数字转换成字符时，有如下公式：(“” +) &gt; String() &gt; .toString() &gt; new String()。String()属于内部函数，所以速度很快。而.toString()要查询原型中的函数，所以速度逊色一些，new String()需要重新创建一个字符串对象，速度最慢。</p>
-<p>8.[顶]当需要将浮点数转换成整型时，应该使用Math.floor()或者Math.round()。而不是使用parseInt(),该方法用于将字符串转换成数字。而且Math是内部对象，所以Math.floor()其实并没有多少查询方法和调用时间，速度是最快的。</p>
-<p>9.尽量作用JSON格式来创建对象，而不是var obj=new Object()方法。因为前者是直接复制，而后者需要调用构造器，因而前者的性能更好。</p>
-<p>10.当需要使用数组时，也尽量使用JSON格式的语法，即直接使用如下语法定义数组：[parrm,param,param…],而不是采用 new Array(parrm,param,param…)这种语法。因为使用JSON格式的语法是引擎直接解释的。而后者则需要调用Array的构造器。</p>
-<p>11.[顶]对字符串进行循环操作，例如替换、查找，就使用正则表达式。因为JS的循环速度比较慢，而正则表达式的操作是用C写成的API，性能比较好。</p>
-<p><strong>最后有一个基本原则，对于大的JS对象，因为创建时时间和空间的开销都比较大，因此应该尽量考虑采用缓存。</strong></p>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/11/26/js性能优化/">js性能优化</a>
+    </h1>
+  
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -238,7 +164,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -251,27 +177,17 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/26/js性能优化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -293,10 +209,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
