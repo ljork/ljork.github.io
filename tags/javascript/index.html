@@ -6,20 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>js性能优化 | Hexo</title>
+  <title>Tag: javascript | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js性能优化下面是一些关于客户端JS性能的一些优化的小技巧：1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋">
-<meta property="og:type" content="article">
-<meta property="og:title" content="js性能优化">
-<meta property="og:url" content="http://yoursite.com/2016/11/26/js性能优化/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/javascript/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="js性能优化下面是一些关于客户端JS性能的一些优化的小技巧：1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋">
-<meta property="og:image" content="http://yoursite.com/images/js.jpg">
-<meta property="og:updated_time" content="2017-03-26T12:27:54.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js性能优化">
-<meta name="twitter:description" content="js性能优化下面是一些关于客户端JS性能的一些优化的小技巧：1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋">
-<meta name="twitter:image" content="http://yoursite.com/images/js.jpg">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -129,68 +123,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js性能优化" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      js性能优化
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/11/26/js性能优化/" class="archive-article-date">
+  	<time datetime="2016-11-26T12:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/11/26/js性能优化/">js性能优化</a>
     </h1>
   
 
-        
-        <a href="/2016/11/26/js性能优化/" class="archive-article-date">
-  	<time datetime="2016-11-26T12:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/images/js.jpg" alt=""></p>
-<h2 id="js性能优化"><a href="#js性能优化" class="headerlink" title="js性能优化"></a>js性能优化</h2><h3 id="下面是一些关于客户端JS性能的一些优化的小技巧："><a href="#下面是一些关于客户端JS性能的一些优化的小技巧：" class="headerlink" title="下面是一些关于客户端JS性能的一些优化的小技巧："></a>下面是一些关于客户端JS性能的一些优化的小技巧：</h3><p>1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋值，而应该使用嵌套的++或－－运算符。</p>
-<p>2、如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度。</p>
-<p>3、局部变量的访问速度要比全局变量的访问速度更快，因为全局变量其实是window对象的成员，而局部变量是放在函数的栈里的。</p>
-<p>4.尽量少使用eval，每次使用eval需要消耗大量时间，这时候使用JS所支持的闭包可以实现函数模板。</p>
-<p>5.尽量避免对象的嵌套查询，对于obj1.obj2.obj3.obj4这个语句，需要进行至少3次查询操作，先检查obj1中是否包含 obj2，再检查obj2中是否包含obj3，然后检查obj3中是否包含obj4…这不是一个好策略。应该尽量利用局部变量，将obj4以局部变量 保存，从而避免嵌套查询。</p>
-<p>6.使运算符时，尽量使用+＝，－＝、*＝、\=等运算符号，而不是直接进行赋值运算。</p>
-<p>7.[顶]当需要将数字转换成字符时，采用如下方式：”” + 1。从性能上来看，将数字转换成字符时，有如下公式：(“” +) &gt; String() &gt; .toString() &gt; new String()。String()属于内部函数，所以速度很快。而.toString()要查询原型中的函数，所以速度逊色一些，new String()需要重新创建一个字符串对象，速度最慢。</p>
-<p>8.[顶]当需要将浮点数转换成整型时，应该使用Math.floor()或者Math.round()。而不是使用parseInt(),该方法用于将字符串转换成数字。而且Math是内部对象，所以Math.floor()其实并没有多少查询方法和调用时间，速度是最快的。</p>
-<p>9.尽量作用JSON格式来创建对象，而不是var obj=new Object()方法。因为前者是直接复制，而后者需要调用构造器，因而前者的性能更好。</p>
-<p>10.当需要使用数组时，也尽量使用JSON格式的语法，即直接使用如下语法定义数组：[parrm,param,param…],而不是采用 new Array(parrm,param,param…)这种语法。因为使用JSON格式的语法是引擎直接解释的。而后者则需要调用Array的构造器。</p>
-<p>11.[顶]对字符串进行循环操作，例如替换、查找，就使用正则表达式。因为JS的循环速度比较慢，而正则表达式的操作是用C写成的API，性能比较好。</p>
-<p><strong>最后有一个基本原则，对于大的JS对象，因为创建时时间和空间的开销都比较大，因此应该尽量考虑采用缓存。</strong></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -206,7 +168,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -219,90 +181,17 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/26/js性能优化/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -325,9 +214,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

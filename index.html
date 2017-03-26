@@ -204,10 +204,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="js.jpg" alt=""></p>
-<p>##js性能优化</p>
-<p>###下面是一些关于客户端JS性能的一些优化的小技巧：</p>
-<p>1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋值，而应该使用嵌套的++或－－运算符。</p>
+        <p><img src="/images/js.jpg" alt=""></p>
+<h2 id="js性能优化"><a href="#js性能优化" class="headerlink" title="js性能优化"></a>js性能优化</h2><h3 id="下面是一些关于客户端JS性能的一些优化的小技巧："><a href="#下面是一些关于客户端JS性能的一些优化的小技巧：" class="headerlink" title="下面是一些关于客户端JS性能的一些优化的小技巧："></a>下面是一些关于客户端JS性能的一些优化的小技巧：</h3><p>1、关于JS的循环，循环是一种常用的流程控制。JS提供了三种循环：for(;;)、while()、for(in)。在这三种循环中 for(in)的效率最差，因为它需要查询Hash键，因此应尽量少用for(in)循环，for(;;)、while()循环的性能基本持平。当然，推 荐使用for循环，如果循环变量递增或递减，不要单独对循环变量赋值，而应该使用嵌套的++或－－运算符。</p>
 <p>2、如果需要遍历数组，应该先缓存数组长度，将数组长度放入局部变量中，避免多次查询数组长度。</p>
 <p>3、局部变量的访问速度要比全局变量的访问速度更快，因为全局变量其实是window对象的成员，而局部变量是放在函数的栈里的。</p>
 <p>4.尽量少使用eval，每次使用eval需要消耗大量时间，这时候使用JS所支持的闭包可以实现函数模板。</p>
@@ -232,6 +230,10 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能优化</a>
         		</li>
       		
@@ -244,7 +246,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/javascript/" class="article-tag-list-link color1">javascript</a>
+        			<a href="/categories/前端zongjie/" class="article-tag-list-link color5">前端zongjie</a>
         		</li>
       		
 		</ul>
@@ -350,6 +352,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
