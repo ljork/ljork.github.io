@@ -6,14 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: javascript | Hexo</title>
+  <title>javaScript封装的各种写法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/javascript/index.html">
+  <meta name="description" content="通常写js组件开发的，都会用到匿名函数的写法去封装一个对象，与外界形成一个闭包的作用域。
+　　主要对封装进行研究，因为前后台都会涉及到面向对象的概念，对于封装，怎么封装，封装的性能，等等很重要概念。封装（在程序世界是第一概念，我个人认为），全天下漫天遍野的封装，JQuery，EXT和Prototype.js封装的是javascript，jQuery uI和jQuery mobile封装着jQu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScript封装的各种写法">
+<meta property="og:url" content="http://yoursite.com/2016/10/27/javaScript封装的各种写法/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="通常写js组件开发的，都会用到匿名函数的写法去封装一个对象，与外界形成一个闭包的作用域。
+　　主要对封装进行研究，因为前后台都会涉及到面向对象的概念，对于封装，怎么封装，封装的性能，等等很重要概念。封装（在程序世界是第一概念，我个人认为），全天下漫天遍野的封装，JQuery，EXT和Prototype.js封装的是javascript，jQuery uI和jQuery mobile封装着jQu">
+<meta property="og:image" content="http://yoursite.com/images/feng.jpg">
+<meta property="og:updated_time" content="2017-03-27T14:10:51.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="javaScript封装的各种写法">
+<meta name="twitter:description" content="通常写js组件开发的，都会用到匿名函数的写法去封装一个对象，与外界形成一个闭包的作用域。
+　　主要对封装进行研究，因为前后台都会涉及到面向对象的概念，对于封装，怎么封装，封装的性能，等等很重要概念。封装（在程序世界是第一概念，我个人认为），全天下漫天遍野的封装，JQuery，EXT和Prototype.js封装的是javascript，jQuery uI和jQuery mobile封装着jQu">
+<meta name="twitter:image" content="http://yoursite.com/images/feng.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -123,75 +132,180 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-javaScript封装的各种写法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/26/js性能优化/" class="archive-article-date">
-  	<time datetime="2016-11-26T12:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/26/js性能优化/">js性能优化</a>
+    <h1 class="article-title" itemprop="name">
+      javaScript封装的各种写法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/10/27/javaScript封装的各种写法/" class="archive-article-date">
+  	<time datetime="2016-10-27T14:09:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/feng.jpg" alt=""><br>　　通常写js组件开发的，都会用到匿名函数的写法去封装一个对象，与外界形成一个闭包的作用域。</p>
+<p>　　主要对封装进行研究，因为前后台都会涉及到面向对象的概念，对于封装，怎么封装，封装的性能，等等很重要概念。封装（在程序世界是第一概念，我个人认为），全天下漫天遍野的封装，JQuery，EXT和Prototype.js封装的是javascript，jQuery uI和jQuery mobile封装着jQuery</p>
+<p>　　回到主题javaScript封装写法，先来看看一个简单的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> a = <span class="string">'hello'</span>;</div><div class="line">      alert(a);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　js函数是最原始，最基础的封装，懂js一目了然，如果你的页面不需要很多js交互操作，就可以用这种简单的方式，如果你喜欢用JQuery,则需要写成这样<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">'#id'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'hello'</span>);</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>　　如果用Node.js则比较复杂点，因为要Node.js要加载一个HTTP模块，写法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">    res.writeHead(<span class="number">200</span>,&#123;<span class="string">'Content-Type'</span>:<span class="string">'text/html'</span>&#125;);</div><div class="line">    res.write(<span class="string">'&lt;p&gt;hello&lt;/p&gt;'</span>);</div><div class="line">&#125;).listen(<span class="number">8080</span>);</div></pre></td></tr></table></figure></p>
+<p>　　再深层次封装写法，如果遇到大量使用js操作，单凭每个小的函数无法满足，因为它们存在一个公共的域中，写法多而散很容易造成了很多bug因素，需要规整。js创造者给我们提供了一个叫匿名函数，顾名思义，匿名函数就是没有实际名字的函数，它的格式很多种，！function(){}(),(function(){})(),(function(){}()),new function(){},void function(){}();JQuery.js就是一个匿名函数封装,先看最常用的:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       star.init = (<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> e = <span class="keyword">new</span>  Editor(name, Data.toolbarData);</div><div class="line">        &#125;);</div><div class="line"> &#125;)()</div></pre></td></tr></table></figure></p>
+<p>　　如果开发一些js组件的时候，可以先创建一个对象，给这个对象属性和方法，让这个对象能够单独操作和可以和其他对象合作<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> klm = klm || &#123;&#125;;</div><div class="line"></div><div class="line">  klm = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">              <span class="comment">//第一个写法</span></div><div class="line">              klm.init = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">                    alert(<span class="string">'hello'</span>);</div><div class="line"></div><div class="line">               &#125;</div><div class="line"></div><div class="line">                <span class="comment">//第二个写法</span></div><div class="line">                 klm.browser = (<span class="function"><span class="keyword">function</span>(<span class="params">ua</span>)</span>&#123;</div><div class="line">                            <span class="keyword">var</span> b = &#123;</div><div class="line">                              <span class="attr">msie</span>:<span class="regexp">/msie/</span>.test(ua) &amp;&amp; !<span class="regexp">/opera/</span>.test(ua),</div><div class="line">                              <span class="attr">opera</span>:<span class="regexp">/opera/</span>.test(ua),</div><div class="line">                              <span class="attr">safari</span>:<span class="regexp">/webkit/</span>.test(ua) &amp;&amp; !<span class="regexp">/chrome/</span>.test(ua),</div><div class="line">                              <span class="attr">firefox</span>:<span class="regexp">/firefox/</span>.test(ua),</div><div class="line">                              <span class="attr">chrome</span>:<span class="regexp">/chrome/</span>.test(ua)</div><div class="line">                           &#125;;</div><div class="line">                        &#125;)(<span class="built_in">window</span>.navigator.userAgent.toLowerCase());</div><div class="line"></div><div class="line">                       <span class="comment">//将其定义方法以接口方式返回给外界引用</span></div><div class="line"></div><div class="line">                        <span class="keyword">return</span>&#123;</div><div class="line">                              <span class="attr">init</span>: klm.init,</div><div class="line">                              <span class="attr">browser</span>:klm.browser  </div><div class="line">                        &#125;</div><div class="line"></div><div class="line">      &#125;)();</div></pre></td></tr></table></figure></p>
+<p>　　接下来这种js封装写法是我自己比较喜欢的<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">var</span> myOpinion = myOpinion || &#123;&#125;;</div><div class="line">myOpinion.prototype=&#123;</div><div class="line">               <span class="attr">init</span>:<span class="function"><span class="keyword">function</span>(<span class="params">obj,i</span>)</span>&#123;</div><div class="line">                          alert(<span class="string">'hello'</span>);</div><div class="line">                &#125;,</div><div class="line">                <span class="attr">closeWindow</span>:<span class="function"><span class="keyword">function</span>(<span class="params">obj,d</span>)</span>&#123;</div><div class="line">                      obj.click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                           d.hide();</div><div class="line">                       &#125;);</div><div class="line">                  &#125;</div><div class="line">               &#125;</div><div class="line">               $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                   <span class="keyword">var</span> my = myOpinion.prototype;</div><div class="line">                   my.init($(<span class="string">".z-sidebar li em"</span>),$(<span class="string">"#contact"</span>));             </div><div class="line">                  $(<span class="string">"#contact"</span>).add(my.closeWindow($(<span class="string">".z-sidebar li em"</span>),$(<span class="string">"#contact"</span>)));</div><div class="line"></div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　这种方式先通过prototype继承方式把每一个小的操作封装成属性，init和closeWindow，然后可以进行初始化加载如my.init();也可以绑定到某个操作事件上如$(“#contact”).add(my.closeWindow());这些封装一气而成。</p>
+<p>　　还有定义单个属性封装<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">WinShow.create = <span class="function"><span class="keyword">function</span>(<span class="params">c,body</span>)</span>&#123;        </div><div class="line">                      <span class="keyword">var</span> _head = <span class="string">'&lt;div class="+ c.heacss +"&gt;&lt;span class="+ c.concss +"&gt;'</span> + c.title + <span class="string">'&lt;/span&gt;&lt;/div&gt;'</span>;</div><div class="line">                      <span class="keyword">this</span>.container.innerHTML = _head;</div><div class="line">                      <span class="keyword">return</span> <span class="keyword">this</span>.container;</div><div class="line">                      <span class="keyword">this</span>.container.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line"></div><div class="line">                              alert(<span class="string">'hello'</span>);</div><div class="line"></div><div class="line">                  &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>　　在这里我创建一个create属性以匿名函数形式封装一段HTML代码，并给这个 HTML代码绑定点击事件。</p>
+<p>转载自：<a href="http://www.cnblogs.com/kuailingmin/p/3838322.html" target="_blank" rel="external">http://www.cnblogs.com/kuailingmin/p/3838322.html</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能优化</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">封装</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端总结/" class="article-tag-list-link color5">前端总结</a>
+        			<a href="/categories/javascript/" class="article-tag-list-link color1">javascript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/10/27/javaScript封装的各种写法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/26/js性能优化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js性能优化
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/05/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -214,9 +328,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
